@@ -13,6 +13,9 @@ function Navbar() {
           <li className="nav-item">
             <Link className="nav-link active" aria-current="page" to='/about'>About</Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link active" aria-current="page" to='/album'>相簿</Link>
+          </li>
         </ul>  
       </div>
     </div>

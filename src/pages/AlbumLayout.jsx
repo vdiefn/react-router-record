@@ -19,9 +19,12 @@ function AlbumLayout(){
     <div className="row">
       <div className="col-4">
         左側列表
+        <p>
+          <Link to='search'>搜尋頁面</Link>
+        </p>
         {
           list.map((item) => {
-            return (<li key={item.id}> {item.id}
+            return (<li key={item.id}>
                 <Link to={item.id}>{item.id}</Link>
               </li>
             )

@@ -1,4 +1,4 @@
-import { useParams} from 'react-router-dom'
+import { useParams, useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
@@ -7,6 +7,7 @@ function AlbumPhoto() {
   const [photo, setPhoto] = useState({})
   const api = 'https://api.unsplash.com/photos'
   const accessId = import.meta.env.VITE_UNSPLASH_ACCESS
+  const navigate = useNavigate()
 
   useEffect(() => {
     (async() => {
@@ -17,6 +18,7 @@ function AlbumPhoto() {
 
   return (
     <>
+    <button type='button' onClick={()=>{navigate(-1)}}>回上一頁</button>
       這是一張圖片 {id}
       <p>{photo.description}</p>
       <img src={photo?.urls?.regular} className="img-fluid" alt=""></img>

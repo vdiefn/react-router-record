@@ -7,6 +7,7 @@ import AlbumLayout from './pages/AlbumLayout'
 import AlbumIndex from './pages/AlbumIndex'
 import AlbumPhoto from './pages/AlbumPhoto'
 import AlbumSearch from './pages/AlbumSearch'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path=':id' element={<AlbumPhoto />}></Route>
             <Route path='search' element={<AlbumSearch/>}></Route>
           </Route>
+          <Route path='*' element={<NotFound />}></Route>
         </Routes>
         
       </div>
